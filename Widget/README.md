@@ -1,0 +1,1 @@
+This is sample code to use Widget on Android.
