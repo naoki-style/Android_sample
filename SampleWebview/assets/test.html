@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="JavaScript">
+function displayBrowserName()
+{
+<!--
+document.write(navigator.appName);
+document.write(navigator.appVersion);
+document.write(navigator.userAgent);
+// -->
+}
+</script>
+<script language="JavaScript">
+function displayTime()
+{
+<!--
+myMessage = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24");
+document.write("It's ");
+document.write(myMessage[(new Date()).getHours()]);
+document.write(" o'clock.");
+// -->
+}
+</script>
+<script language="JavaScript"><!--
+function getRealTime(){
+  myTbl     = new Array("Sun","Mon","Tue","Wed","Tur","Fri","Sat");
+  myD       = new Date();
+
+  myYear    = myD.getYear();
+  myYear4   = (myYear < 2000) ? myYear+1900 : myYear;
+  myMonth   = myD.getMonth() + 1;
+  myDate    = myD.getDate();
+  myDay     = myD.getDay();
+  myHours   = myD.getHours();
+  myMinutes = myD.getMinutes();
+  mySeconds = myD.getSeconds();
+
+  myMess1 = myYear4 + "." + myMonth + "." + myDate + "(" + myTbl[myDay] + ")";
+  myMess2 = myHours + ":" + myMinutes + "." + mySeconds;
+  document.myForm.myFormDate.value = myMess1;
+  document.myForm.myFormTime.value = myMess2;
+}
+// --></script>
+</head>
+<body>
+
+<h1>My First JavaScript</h1>
+<p id="demo">This is a paragraph.</p>
+
+<button type="button" onclick="displayBrowserName()">Browser Name</button>
+<button type="button" onclick="displayTime()">get Time</button>
+
+<form name="myForm">
+Date and Time :
+<input type="text" size="28" name="myFormDate">
+<input type="text" size="15" name="myFormTime">
+</form>
+<script language="JavaScript"><!--
+  setInterval("getRealTime()",1000);
+// --></script>
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+
+<script type="text/javascript">
+    function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+</script>
+</body>
+</html> 
