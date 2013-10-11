@@ -1,0 +1,1 @@
+This apk is to test Android Local Server.
