@@ -1,0 +1,1 @@
+This is sample code to use transparent Activity on Android.
